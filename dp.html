@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="robots" content="noindex">
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="../../../../Styles/img/colegio.png">
+		<title>Calculadora - Colégio Adélia</title>
+		<script type="text/javascript" script-name="anonymous-pro" src="http://use.edgefonts.net/anonymous-pro.js"></script>
+		<script type="text/javascript" script-name="cabin-condensed" src="http://use.edgefonts.net/cabin-condensed.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="style_print.css" rel="stylesheet" type="text/css" media="print">
+
+			<script type="text/javascript">
+			function calcValor(){
+			  // valor dia 7
+			  document.getElementById("total2").value = '0';
+			  var VTOTALLIQUIDO2 = parseFloat(document.getElementById("valor1").value);
+			  var DESCONTO2 = parseFloat(document.getElementById("desconto1").value);
+			  var PDESCONTO2 = parseFloat( (VTOTALLIQUIDO2 * DESCONTO2)/100);
+			  var AULAS = parseFloat(document.getElementById("qt_aula").value);
+			  var TOTAL2 = parseFloat(((VTOTALLIQUIDO2) - parseFloat(PDESCONTO2))) * (parseFloat(AULAS+(AULAS * 0.1)));
+			 
+			  document.getElementById("total2").value = 'R$ ' + TOTAL2.toFixed(2);
+			}
+
+			</script>
+
+		<link rel="stylesheet" href="style/css/reset.css">
+		<link rel="stylesheet" href="style.css/colegio.css">
+		<link rel="stylesheet" href="style/css/bio.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+	</head>
+	<body>
+
+		<link rel="stylesheet" href="../../../../Styles/css/reset.css">
+		<link rel="stylesheet" href="../../../../Styles/css/colegio.css">
+		<link rel="stylesheet" href="../../../../Styles/css/bio.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+	</head>
+	<body>
+		<div class="Impressao">
+		<main class="break">
+			<header>
+			<h1 style="font-weight: bold; font-size: 25px; text-align: center;" class="titulo-principal">Calculo DP 2022 - COLÉGIO ADÉLIA -  <p>  GUARUJÁ - DATA: <b id="date"></p></b></h1>
+         
+  <script>
+                   var currentDate  = new Date(),
+    currentDay   = currentDate.getDate() < 10 
+                 ? '0' + currentDate.getDate() 
+                 : currentDate.getDate(),
+    currentMonth = currentDate.getMonth() < 9 
+                 ? '0' + (currentDate.getMonth() + 1) 
+                 : (currentDate.getMonth() + 1);
+
+document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
+            </script>
+			
+			</header>
+			<div class="ImgLogos">
+				<img id ="logo" src="../../../../Styles/img/logo_escola_tecnica.png" width= "30" height= "30"/>
+			</div>
+			<div class="container" style="margin-left: 30px;" >
+			    <br>
+			
+				<div class="cursos" style="display: flex;">
+			
+				
+				</select>
+			<form class="form-horizontal">
+			<fieldset>
+
+			<!-- Text input-->
+			<div class="form-group1">
+			  <label class="col-md-4 control-label" for="Mensalidade">Mensalidade Integral:</label>  
+			  <div class="col-md-4">
+			  <input type="text" id="valor1" value="1473" name="valor1" readonly="true" type="text" class="form-control input-md">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group2">
+			  <label class="col-md-4 control-label" for="Porcentagem">Porcentagem do Desconto</label>  
+			  <div class="col-md-4">
+			  <input type="text" id="desconto1" onblur="calcValor()" name="desconto1" value="93.890"  type="text" placeholder="%" class="form-control input-md">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group3">
+			  <label class="col-md-4 control-label" for="Dia 1º">Disciplina:</label>  
+			  <div class="col-md-4">
+			  <input type="text" align="center" name="qt_aula" id="qt_aula" onblur="calcValor()" size="1" value="1" style=" class="form-control input-md">
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group4">
+			  <label class="col-md-4 control-label" for="Dia 7">Até o Dia 7</label>  
+			  <div class="col-md-4">
+			  <input type="text" id="total2" name="total2" readonly="true" type="text" class="form-control input-md">
+			  </div>
+			</div>
+			<div><br><br><br>
+		
+<br><br><br>
+			<div class="assinatura">
+			
+			
+			<p>Entrada:     R$_________________(____________________________________________________________)<br><br>
+			+6 parcelas de  R$_________________(____________________________________________________________)</p><br><br><br>
+			<br><br><br>
+				─────────────────────────<br>
+				Assinatura do Colaborador(a)
+			</div>
+			
+			<div class="horaAula">
+				<ul id="horaAula"></ul>
+			</div>
+        
+			<!-- <p align="center">
+			<img border="0" src="img/redes.png" width="410" height="388" align="center">
+			</div> -->
+		</main>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<footer class="rodape-pagina">
+			<img border="0" src="img/rodape (1).jpg" width="1000" height="288" align="center">
+		</footer>
+	</body>
+</html>
